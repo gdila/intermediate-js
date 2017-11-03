@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>JavaScript 201: Intermediate JavaScript</title>
+		<title>Intermediate JavaScript</title>
 
 		<meta name="description" content="Girl Develop It framework for easily creating beautiful presentations using HTML in GDI theme. Forked from Hakim El Hattab's reveal.js">
 		<meta name="author" content="Girl Develop It">
@@ -50,11 +50,11 @@
 			<div class="slides">
 				<!-- Opening -->
 				<section>
-					<img src="img/circle-gdi-logo.png" alt="GDI Logo" class="noborder"/>
-					<h1>JavaScript 201</h1>
+					<img src="img/dayton-logo.png" alt="GDI Logo" class="noborder"/>
+					<h1>Intermediate JavaScript</h1>
 					<h2>Class 2: Functions, DOM, and Events</h2>
 					<p>
-						<small>View the slides at <a href ="https://github.com/gdila/intermediate-js">gdila.org/js201</a>.</small>
+						<small>View the slides at <a href ="https://gdidayton.github.io/gdi-intermediate-js">gdidayton.github.io/gdi-intermediate-js</a>.</small>
 					</p>
 				</section>
 
@@ -68,55 +68,64 @@
 add(5, 4);</code></pre>
 					<p>Review</p>
 					<ul>
-						<li class="fragment">Declaring and defining</li>
-						<li class="fragment">Arguments or parameters</li>
-						<li class="fragment">Function name</li>
-						<li class="fragment">Function body</li>
-						<li class="fragment">Invocation</li>
+						<li  >Declaring and defining</li>
+						<li  >Arguments or parameters</li>
+						<li  >Function name</li>
+						<li  >Function body</li>
+						<li  >Invocation</li>
 					</ul>
+
+					<aside class="notes">
+
+					</aside>
 				</section>
 
 				<section>
-					<h3>Function Declaration</h3>
-<pre><code class="javascript">function nameImprover(name, adj) {
-	return 'Admiral ' + name + ' Mc' + adj + 'pants';
-}
+					In JavaScript functions can be created either through a
+					<span class="blue">function declaration</span> or a
+					<span class="blue">function expression</span>. A function
+					declaration is the "normal" way of creating a named function.
+				</section>
 
-nameImprover('Natalie', 'Sparkly');</code></pre>
+				<section>
+					<h3>Named Function Declaration</h3>
+
+<pre><code class="javascript">// Named function declaration
+function myFunction () { /* logic here */ }</code></pre>
 					<ul>
-						<li>Defines a named function</li>
-						<li>Occur as standalone constructs</li>
-						<li>Cannot be nested in non-function blocks</li>
+						<li>Defines a function and gives it a name</li>
+						<li>Standalone</li>
+						<li>Cannot be nested in non-function blocks (inside your other code)</li>
 					</ul>
 				</section>
 
 				<section>
 					<h3>Function Expression</h3>
-<pre><code class="javascript">var nameImprover = function(name, adj) {
-	return 'Admiral ' + name + ' Mc' + adj + 'pants';
-}
+<pre><code class="javascript">// Assignment of a function expression to a variable
+var myFunction = function () { /* logic here */ };
 
-nameImprover('Natalie', 'Sparkly');</code></pre>
+// Assignment of a function expression to a property
+var myObj = {
+    myFunction: function () { /* logic here */ }
+};</code></pre>
 					<ul>
-						<li>Defines a function as part of a larger expression syntax (usually a variable)</li>
-						<li>Functions can be named or anonymous
-							<ul>
-								<li>If named, the function name is not available outside of its own scope</li>
-							</ul>
-						</li>
+						<li>Defines a function as a variable or property of an object</li>
+						<li>Functions can be named or anonymous	</li>
 						<li>Cannot start with <code>function</code></li>
 					</ul>
 				</section>
 
 				<section>
-					<h3>Named Function Expression (NFE)</h3>
+					<h3>Named Function Expression</h3>
+					<h4>Yes, we combined them!</h4>
 <pre><code class="javascript">var nameImprover = function huzzah(name, adj) {
 	return 'Admiral ' + name + ' Mc' + adj + 'pants';
 };</code></pre>
 					<p>The function name is scoped to the defined function.</p>
+
 				</section>
 
-				<section>
+				<!-- <section>
 					<h3>Recursion</h3>
 					<p>NFE is handy for recursive functions, or functions that call themselves:</p>
 <pre><code class="javascript">var factorial = function factorialCalc(num) {
@@ -135,7 +144,7 @@ nameImprover('Natalie', 'Sparkly');</code></pre>
 }
 
 console.log(factorial(3));</code></pre>
-				</section>
+				</section> -->
 
 				<section>
 					<h3>Hoisting</h3>
@@ -145,8 +154,13 @@ console.log(factorial(3));</code></pre>
 function saySomething(text) {
 	console.log(text);
 }</code></pre>
-					<p>It works! The function gets <span class="blue">hoisted</span>, or moved to the top of its scope.</p>
-					<p>This is both good and bad. Good because it keeps our code from throwing errors. Bad because it allows us to develop bad habits in our code.</p>
+					<p class="fragment">It works! The function gets <span class="blue">hoisted</span>, or moved to the top of its scope.</p>
+					<p class="fragment">This is both good and bad. Good because it keeps our code from throwing errors. Bad because it allows us to develop bad habits in our code.</p>
+
+				</section>
+				<section>
+					<h3>Hoisting</h3>
+					<img src="img/hoisting.gif" height="756" width="1024" alt="" >
 				</section>
 
 				<section>
@@ -163,6 +177,16 @@ var saySomething = function(text) {
 }
 
 saySomething('hello');</code></pre>
+
+<aside class="notes">
+	Hoisting, a JavaScript feature that allows you to make forward references to functions and variables
+
+	The rule is quite simple and it makes sense to state what it is and then explore some of its consequences.
+	Hoisting moves all declarations to the start of the function that contains them.
+	or
+	Hoisting moves all declarations to the start of their enclosing scope.
+
+</aside>
 				</section>
 
 				<section>
@@ -176,11 +200,30 @@ saySomething('hello');</code></pre>
 
 				<section>
 					<h3>Immediately-Invoked Function Expression</h3>
+					<h4>Yo dawg, I heard you liked functions...</h4>
 					<p>We can also use a function expression to create a function that is invoked immediately - an IIFE.</p>
-<pre><code class="javascript">(function sayHello() {
-	alert("hello!");
-})();</code></pre>
+<pre><code class="javascript">// Anything within the parentheses is part of an expression
+(function () { /* logic here */ });
+</code></pre>
 					<p>It starts with a <code>(</code> not with <code>function</code>.</p>
+				</section>
+
+				<section>
+					<h3>Immediately-Invoked Function Expression</h3>
+					<h4>Why?</h4>
+					<p>The primary reason to use an IIFE is to obtain data privacy. But other reasons include:<br /></p>
+					<ul>
+						 <li>Saves space in the global namespace (frees up a variable name)</li>
+						 <li>
+							 Self-documenting style choice
+						 </li>
+						 <li>
+							 Avoids accidentally be invoked more than once
+						 </li>
+					</ul><br />
+					<p>
+						Wikipedia has some great examples - <a href="https://en.wikipedia.org/wiki/Immediately-invoked_function_expression">https://en.wikipedia.org/wiki/Immediately-invoked_function_expression</a>
+					</p>
 				</section>
 
 				<section>
@@ -232,13 +275,14 @@ console.log(addMany(3, 10, 57, 24, 200, 300));</code></pre>
 					<p><a href="files/exercise-functionobject.html" target="_new">Exercise instructions</a></p>
 				</section>
 
+
 				<section>
 					<h3><code>this</code></h3>
 					<p>Each time we create a function, JavaScript creates a keyword called <code>this</code>.</p>
 					<p>We use <code>this</code> similarly to a variable, but we can't change the value.</p>
 					<p>The keyword <code>this</code> refers to the object inside which the function is created.</p>
-					<p class="fragment">Huh?</p>
-					<p class="fragment">Let's look at some examples.</p>
+					<p  >Huh?</p>
+					<p  >Let's look at some examples.</p>
 				</section>
 
 				<section>
@@ -257,6 +301,7 @@ console.log(natalie.getAge());</code></pre>
 
 				<section>
 					<h3><code>this</code> inside callback functions</h3>
+					<h4>HTML DOM Events</h4>
 <pre><code class="xml"><button id="myBtn">A button!</button></code></pre>
 <pre><code class="javascript">var btn = document.getElementById('myBtn');
 
@@ -266,6 +311,11 @@ btn.onclick = function(){
 	console.log(text);
 };</code></pre>
 					<p>A callback function is connected to a DOM element through an event handler - so <code>this</code> refers to the DOM element that fired the event - in this case, the <code>button</code> that was clicked.</p>
+					<aside class="notes">
+
+					check out w3 schools for more dom on events
+					https://www.w3schools.com/jsref/dom_obj_event.asp
+					</aside>
 				</section>
 
 				<section>
@@ -278,7 +328,7 @@ trySomething();</code></pre>
 				</section>
 
 				<section>
-					<img src="img/matrix.gif" height="756" width="1024" alt="">
+					<img src="img/confused.jpg" height="756" width="1024" alt="">
 				</section>
 
 				<section>
@@ -475,7 +525,7 @@ showRelationship('Natalie', 'Ollie');</code></pre>
 				<section>
 					<h3>Let's Develop It!</h3>
 					<p>Pair up with a buddy</p>
-					<p>Open <code>gdila.org</code> in your browser, then open the console.</p>
+					<p>Open <code>gdidayton.org</code> in your browser, then open the console.</p>
 					<p>One person will select a couple different elements on the page, and the other person has to use document methods to select them. You'll know you've got the right one when you hover over it and it highlights on the page (I'll demonstrate).</p>
 					<p>Take turns.</p>
 				</section>
@@ -590,7 +640,7 @@ myLink.addEventListener('click', myCallback);</code></pre>
 					<h3>Event Bubbling</h3>
 					<p>The DOM is a series of objects, nested inside one another: a paragraph inside a div inside the body inside the document, for example.</p>
 					<p>When an event is triggered on a nested element, it's also triggered on the parent(s), all the way up to the <code>document</code> object.</p>
-					<p class="fragment">Really?</p>
+					<p  >Really?</p>
 				</section>
 
 				<section>
@@ -698,12 +748,12 @@ list.addEventListener('click', listClicking);</code></pre>
 	<p>You can learn about about <a href="https://en.wikipedia.org/wiki/Lion">lions</a>, <a href="https://en.wikipedia.org/wiki/Tiger">tigers</a>, or <a href="https://en.wikipedia.org/wiki/Bear">bears</a>.</p>
 	<p>Or you could just relax and <a href="https://www.youtube.com/watch?v=QRZ8U34D-Jk">watch a video.</a></p>
 </div></code></pre>
-					<p>Use event delegation to display an alert each time a user clicks a link that asks them if they're sure.</p>
+					<p>Use event delegation to display an alert each time a user clicks a link that asks them if they're sure they want to navigate from this page.</p>
 				</section>
 
 				<section>
 					<h2>Questions?</h2>
-					<p>Questions on event bubbling and delgation?</p>
+					<p>Questions on event bubbling and delegation?</p>
 				</section>
 
 				<section>
@@ -720,7 +770,7 @@ list.addEventListener('click', listClicking);</code></pre>
 			</div>
 			<footer>
 				<div class="copyright">
-					JavaScript 201 -- Los Angeles --
+					JavaScript 201 -- Dayton --
 					<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
 				</div>
 			</footer>

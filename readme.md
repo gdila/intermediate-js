@@ -1,16 +1,18 @@
-# JavaScript 201: Intermediate JavaScript
+# GDI Dayton Intermediate JavaScript
 
-Slides and materials are hosted at [http://gdila.org/js201](http://gdila.org/js201).
+Slides and materials are hosted at [https://gdidayton.github.io/gdi-intermediate-js](https://gdidayton.github.io/gdi-intermediate-js).
 
 ## Course description
 
 Take your JavaScript skills to the next level with this class, which will build on skills learned in JavaScript 101 and take those skills to new and deeper levels.
 
-**Cost: $90**
+**Cost: $80**
 
-**Dates: April 23 and April 30, 2016**
+**Dates: Nov 4 and Nov 11, 2017**
 
-**Location: Opodz in Little Tokyo**
+**Time: 9AM - 1PM**
+
+**Location: Sparkbox**
 
 A limited number of scholarships are available for those with a financial hardship. To apply, contact us at...
 
@@ -21,16 +23,16 @@ List any prerequisites for this class, including any previous classes or the equ
 
 You should have:
 
-(a) taken HTML/CSS 101: Introduction to HTML and CSS with Girl Develop It or have equivalent knowledge,
+(a) taken Intro to HTML/CSS: Introduction to HTML and CSS with Girl Develop It or have equivalent knowledge,
 
-(b) taken JavaScript 101: Introduction to JavaScript through Girl Develop It, or be familiar with JavaScript syntax, variables, arrays, conditionals, for and while loops, objects, event handling and DOM manipulation.
+(b) taken Intro to JavaScript: Introduction to JavaScript through Girl Develop It, or be familiar with JavaScript syntax, variables, arrays, conditionals, for and while loops, objects, event handling and DOM manipulation.
 
 
 ### Tech requirements:
 
  - Your laptop (Mac, PC, or Linux are all okay).
  - A modern web browser - we recommend Google Chrome
- - A text editor. We recommend Sublime Text
+ - A text editor. We recommend [Atom](http://atom.io)
 
 
 ### Topics covered:

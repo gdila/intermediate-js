@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>JavaScript 201: Intermediate JavaScript</title>
+		<title>Intermediate JavaScript</title>
 
 		<meta name="description" content="Girl Develop It framework for easily creating beautiful presentations using HTML in GDI theme. Forked from Hakim El Hattab's reveal.js">
 		<meta name="author" content="Girl Develop It">
@@ -50,97 +50,26 @@
 			<div class="slides">
 				<!-- Opening -->
 				<section>
-					<img src="img/circle-gdi-logo.png" alt="GDI Logo" class="noborder"/>
-					<h1>JavaScript 201</h1>
+					<img src="img/dayton-logo.png" alt="GDI Logo" class="noborder"/>
+					<h1>Intermediate JavaScript</h1>
 					<h2>Class 1: Variables, Arrays, and Objects</h2>
 					<p>
-						<small>View the slides at <a href ="https://github.com/gdila/intermediate-js">gdila.org/js201</a>.</small>
+						<small>View the slides at <a href ="https://gdidayton.github.io/gdi-intermediate-js">gdidayton.github.io/gdi-intermediate-js</a>.</small>
 					</p>
 				</section>
 
-				<!-- Wifi and links -->
 				<section>
-					<h3>JavaScript 201</h3>
-					<p>Wifi network: Opodz Members</p>
-					<p>Wifi password: opodz888</p>
-					<p>&nbsp;</p>
-					<h3>Class Slides</h3>
-					<p><a href="http://gdila.org/js201">gdila.org/js201</a></p>
-				</section>
-
-				<!-- Sponsors -->
-				<section>
-					<h1>Thank You</h1>
-					<p><img src="img/opodz-logo.jpg" height="210" width="585" alt=""></p>
-				</section>
-
-				<!-- GDI Rules -->
-				<section>
-					<h3>Welcome!</h3>
-					<p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-					<p class="green">Some "rules"</p>
-					<ul>
-						<li>Every question is important.</li>
-						<li>Help each other.</li>
-						<li>Have fun.</li>
-						<li>Learn and return.</li>
+          <h3>Let's Develop It</h3>
+          <ul>
+            <li>Go to <a href="https://codepen.io">https://codepen.io</a></li>
+            <li>Create a new pen</li>
+            <li>Write this code inside the JavaScript window.</li>
 					</ul>
-				</section>
-
-				<!-- Student introductions -->
-				<section>
-					<h3>Tell us about yourself</h3>
-					<ul>
-						<li>What's your name?</li>
-						<li>What do you hope to get out of the class?</li>
-						<li>Where would you most like to go on a vacation?</li>
-					</ul>
-				</section>
-
-				<!-- TA introductions -->
-				<section>
-					<h3>Ok, TA's your turn</h3>
-					<ul>
-						<li>What's your name?</li>
-						<li>Why do you like JavaScript?</li>
-						<li>Where would you most like to go on a vacation?</li>
-					</ul>
-				</section>
-
-				<!-- Teacher introduction -->
-				<section>
-					<h2>About Me</h2>
-					<ul>
-						<li>What's my name?</li>
-						<li>What's my favorite language?</li>
-						<li>What do I do?</li>
-						<li>Where would I most like to go on a vacation?</li>
-					</ul>
-				</section>
-
-				<!-- Slides link -->
-				<section>
-					<h3>Follow along!</h3>
-					<p>Access the slides and follow along here:</p>
-					<p><a href="http://gdila.org/js201">gdila.org/js201</a></p>
-				</section>
-
-				<section>
-					<h3>Let's Develop It!</h3>
-					<p>Let's get set up to write and test a little JavaScript. Make a folder called <code>gdi</code>. Inside, make an HTML page called <code>index.html</code> and a JavaScript file called <code>mycode.js</code>. Then set up your <code>index.html</code> file like this:</p>
-<pre><code class="javascript">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-	&lt;meta chartset="UTF-8"/&gt;
-	&lt;title&gt;Test Page&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-	&lt;p&gt;This is my awesome JavaScript code.&lt;/p&gt;
-
-	&lt;script src="mycode.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-				</section>
+						<pre><code>
+alert('Hello World!');
+console.log('Secret message');
+						</code></pre>
+        </section>
 
 				<!-- Variables & Scope -->
 				<section>
@@ -170,6 +99,7 @@
 func();
 
 console.log(local);</code></pre>
+					<a href="http://bit.ly/intermediate-js-local-scope" target=blank>http://bit.ly/intermediate-js-local-scope</a>
 				</section>
 
 				<section>
@@ -184,6 +114,7 @@ function func() {
 func();
 
 console.log(global);</code></pre>
+					<a href="http://bit.ly/intermediate-js-global-scope" target=blank>http://bit.ly/intermediate-js-global-scope</a>
 				</section>
 
 				<section>
@@ -202,6 +133,7 @@ console.log(local);</code></pre>
 
 				<section>
 					<h3>Precedence</h3>
+
 <pre><code class="javascript">var g = "global";
 
 function go() {
@@ -212,6 +144,7 @@ function go() {
 
 go();
 alert(g + " outside go()");</code></pre>
+					<a href="http://bit.ly/intermediate-js-precedence" target=blank>http://bit.ly/intermediate-js-precedence</a>
 				</section>
 
 				<section>
@@ -222,10 +155,18 @@ alert(g + " outside go()");</code></pre>
 				<!-- Arrays -->
 				<section>
 					<h3>Arrays</h3>
-<pre><code class="javascript">var coolClasses = ['HTML 101', 'HTML 201', 'JS 101', 'JS 201'];</code></pre>
+<pre><code class="javascript">var coolLadyCoders =
+  [
+    'Grace Hopper',
+    'Ada Lovelace',
+    'Dorothy Vaughan',
+    'Margaret Hamilton',
+  ];</code></pre>
+					<a href="http://bit.ly/intermediate-js-coolLadyCoders" target=blank>http://bit.ly/intermediate-js-coolLadyCoders</a>
 					<ul>
+						<br>
 						<li class="fragment">How long is the array?</li>
-						<li class="fragment">What is the index of <strong>JS 101</strong>?</code></li>
+						<li class="fragment">What is the index of <strong>'Dorothy Vaughan'</strong>?</code></li>
 						<li class="fragment">What is at the 0th index?</li>
 						<li class="fragment">How do we find the length of an array?</li>
 						<li class="fragment">When would we use an array?</li>
@@ -234,60 +175,82 @@ alert(g + " outside go()");</code></pre>
 
 				<section>
 					<h3>Assignment and expanding arrays</h3>
-<pre><code class="javascript">var classes = [];
+<pre><code class="javascript">var coolLadyCoders =
+  [
+    'Grace Hopper',
+    'Ada Lovelace',
+    'Dorothy Vaughan',
+    'Margaret Hamilton',
+  ];
 
-classes[0] = 'HTML 101';
-classes[1] = 'HTML 201';
+coolLadyCoders[0] = 'Ada Lovelace';
+coolLadyCoders[1] = 'Grace Hopper';
 
-classes.push('JS 101');
+coolLadyCoders.push('Anita Borg');
 </code></pre>
 					<p>We can also use the <code>new</code> keyword to create a new array:</p>
-<pre><code class="javascript">var classes = new Array();</code></pre>
+<pre><code class="javascript">var coolLadyCoders = new Array();</code></pre>
 				</section>
 
 				<section>
 					<h3>Accessing items</h3>
-<pre><code class="javascript">var classes = ['HTML 101', 'HTML 201', 'JS 101', 'JS 201'];
+<pre><code class="javascript">var coolLadyCoders =
+  [
+    'Grace Hopper',
+    'Ada Lovelace',
+    'Dorothy Vaughan',
+    'Margaret Hamilton',
+  ];
 
-var firstClass = classes[0];
-var lastClass = classes[3];</code></pre>
+var firstLady = coolLadyCoders[0];
+var lastLady = coolLadyCoders[3];</code></pre>
 				</section>
 
 				<section>
 					<h3>Removing items</h3>
 					<p>The <code>pop()</code> method removes the last item from the array and returns it</p>
-<pre><code class="javascript">var classes = ['HTML 101', 'HTML 201', 'JS 101', 'JS 201'];
+<pre><code class="javascript">var coolLadyCoders =
+  [
+    'Grace Hopper',
+    'Ada Lovelace',
+    'Dorothy Vaughan',
+    'Margaret Hamilton',
+  ];
 
-console.log(classes);
+console.log(coolLadyCoders);
 
-var removed = classes.pop();
+var removed = coolLadyCoders.pop();
 
-console.log(classes);
+console.log(coolLadyCoders);
 console.log(removed);</code></pre>
 				</section>
 
 				<section>
 					<h3>Array review</h3>
-<pre><code class="javascript">var classes = ['HTML 101', 'HTML 201', 'JS 101', 'JS 201'];
+<pre><code class="javascript">var coolLadyCoders =
+  [
+    'Grace Hopper',
+    'Ada Lovelace',
+    'Dorothy Vaughan',
+    'Margaret Hamilton'
+  ];
 
 var i = 0;
 
-console.log(classes[i]); // What will this display?
+console.log(coolLadyCoders[i]); // What will this display?
 
-console.log(classes[1]; // What will this display?
+console.log(coolLadyCoders[1]; // What will this display?
 
-console.log(classes.pop()); // What will this display?
+console.log(coolLadyCoders.pop()); // What will this display?
 
-console.log(classes.length); // what will this display?
+console.log(coolLadyCoders.length); // what will this display?
 </code></pre>
 				</section>
 
 				<section>
 					<h3>Iterating over arrays</h3>
-<pre><code class="javascript">var classes = ['HTML 101', 'HTML 201', 'JS 101', 'JS 201'];
-
-for(var i = 0; i &lt; classes.length; i++) {
-	console.log(classes[i]); // What will this display?
+<pre><code class="javascript">for(var i = 0; i &lt; classes.length; i++) {
+	console.log(coolLadyCoders[i]); // What will this display?
 }
 </code></pre>
 				</section>
@@ -307,12 +270,11 @@ for(var i = 0; i &lt; classes.length; i++) {
 
 				<section>
 					<h3><code>array.join()</code></h3>
-<pre><code class="javascript">var classes = ['HTML 101', 'HTML 201', 'JS 101', 'JS 201'];
-
-console.log(classes.join());
-console.log(classes.join(', '));
-console.log(classes.join(' + '));
-console.log(classes.join(''));</code></pre>
+<pre><code class="javascript">
+console.log(coolLadyCoders.join());
+console.log(coolLadyCoders.join(', '));
+console.log(coolLadyCoders.join(' + '));
+console.log(coolLadyCoders.join(''));</code></pre>
 				</section>
 
 				<section>
@@ -335,6 +297,8 @@ var bigNumbers = numbers.filter(isBigEnough);
 console.log(numbers);
 console.log(bigNumbers);</code></pre>
 					<p>The <code>filter()</code> method creates a new array with all elements that pass the test implemented by the provided function.</p>
+					<br>
+					<a href="http://bit.ly/intermediate-js-filter" target=blank>http://bit.ly/intermediate-js-filter</a>
 				</section>
 
 				<section>
@@ -361,6 +325,8 @@ var bigNumbers = numbers.filter(isBigEnough);</code></pre>
 	{ name: "Grumpy Cat", status: "hungry" }
 ];</code></pre>
 					<p>Filter the array to create a new array of just the cats who are hungry.</p>
+					<br>
+					<a href="http://bit.ly/intermediate-js-cats" target=blank>http://bit.ly/intermediate-js-cats</a>
 				</section>
 
 				<section>
@@ -380,6 +346,8 @@ var numbersPlusFive = numbers.map(function(num){
 console.log(numbers);
 console.log(numbersPlusFive);</code></pre>
 					<p>The <code>map()</code> callback function can take up to three arguments. They are: <code>element</code>, <code>index</code>, and <code>array</code></p>
+					<br>
+					<a href="http://bit.ly/intermediate-js-map" target=blank>http://bit.ly/intermediate-js-map</a>
 				</section>
 
 				<section>
@@ -414,7 +382,9 @@ console.log(numbersPlusFive);</code></pre>
 		year: '2015'
 	}
 };</code></pre>
+					<a href="http://bit.ly/intermediate-js-ollie" target=blank>http://bit.ly/intermediate-js-ollie</a>
 					<ul>
+						<br>
 						<li class="fragment">How many keys are in the object?</li>
 						<li class="fragment">What are the key names?</li>
 						<li class="fragment">What are the values?</li>
@@ -507,6 +477,8 @@ console.log(ollieTheCat[keyVariable]);</code></pre>
 <pre><code class="javascript">console.log(myCats[0].name);
 console.log(myCats[1]furColor);
 console.log(myCats[1]["Fur Color"]);</code></pre>
+					<br>
+					<a href="http://bit.ly/intermediate-js-array-of-objects" target=blank>http://bit.ly/intermediate-js-array-of-objects</a>
 				</section>
 
 				<section>
@@ -520,6 +492,7 @@ console.log(myCats[1]["Fur Color"]);</code></pre>
 for(var key in zoo) {
 	console.log(zoo[key] + ' ' + key);
 }</code></pre>
+					<a href="http://bit.ly/intermediate-js-zoo" target=blank>http://bit.ly/intermediate-js-zoo</a>
 				</section>
 
 				<section>
@@ -554,12 +527,12 @@ console.log(doll);</code></pre>
 				</section>
 
 				<section>
-					<h1>Lunch time!</h1>
+					<h1>Break time!</h1>
 				</section>
 			</div>
 			<footer>
 				<div class="copyright">
-					JavaScript 201 -- Los Angeles --
+					Intermediate JavaScript -- Dayton --
 					<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
 				</div>
 			</footer>
